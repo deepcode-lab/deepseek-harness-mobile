@@ -1,6 +1,7 @@
-package com.dshmobile.shell
+﻿package com.dshmobile.shell
 
 import android.view.View
+import android.view.accessibility.AccessibilityEvent
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
@@ -15,7 +16,7 @@ enum class BarState { STARTING, FAILED, SUCCESS }
 /**
  * Boot wizard UI: full-screen scroll guide (brand block, vertical step
  * cards, engine status card, action grid, version line) plus the floating
- * cold-start pill overlaying the Harness. Pure presentation — all flow
+ * cold-start pill overlaying the Harness. Pure presentation 鈥?all flow
  * decisions live in the caller through the injected callbacks.
  */
 class GuideWizard(
@@ -95,7 +96,7 @@ class GuideWizard(
     }
   }
 
-  /** Ready state: everything installed → show the Launch engine button. */
+  /** Ready state: everything installed 鈫?show the Launch engine button. */
   fun showLaunchReady() {
     showGuideStatus(
       activity.getString(R.string.status_ready_to_launch),
@@ -114,6 +115,7 @@ class GuideWizard(
     // Surface the tail of the diagnostic log as inline error context.
     val tail = AppLog.tail(1200)
     errorText?.text = tail
+        errorBlock?.let { it.contentDescription = activity.getString(R.string.a11y_error_block) }
     errorBlock?.visibility = if (tail.isBlank()) View.GONE else View.VISIBLE
   }
 
@@ -170,11 +172,11 @@ class GuideWizard(
       .alpha(1f)
       .setDuration(200)
       .start()
-    // NOTE: no reload here — MainActivity reloads only when the page had
+    // NOTE: no reload here 鈥?MainActivity reloads only when the page had
     // failed to load; a blanket reload on every show would discard the page
     // state (and race picker callbacks) on each return to foreground.
     // SUCCESS keeps the 6s fade (pulse visible during the cold-start
-    // transition); FAILED must persist — a failed boot always leaves an
+    // transition); FAILED must persist 鈥?a failed boot always leaves an
     // exit (I-26). When no bar was shown, nothing to hide.
     val state = currentBarState
     if (state != null && state != BarState.FAILED) scheduleTopBarHide(6000L)
@@ -285,8 +287,8 @@ class GuideWizard(
         }
       when (state) {
         StepState.DONE -> {
-          circle.text = "✓"
-          glyph.text = "✓"
+          circle.text = "鉁?
+          glyph.text = "鉁?
           glyph.background = null
           glyph.setTextColor(palette.success)
           statusText.setTextColor(palette.textSecondary)
@@ -311,7 +313,7 @@ class GuideWizard(
         }
       }
     }
-    // Newly-done rows pop in (scale 0.9 → 1); the first render stays static.
+    // Newly-done rows pop in (scale 0.9 鈫?1); the first render stays static.
     if (done > prevDone && !firstStepRender) {
       for (i in prevDone until done) {
         val card = stepCards.getOrNull(i) ?: continue
@@ -480,6 +482,8 @@ class GuideWizard(
         typeface = android.graphics.Typeface.create("sans-serif-medium", android.graphics.Typeface.NORMAL)
         setPadding((8 * d).toInt(), 0, 0, 0)
       }
+        statusTitle.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
+    statusTitle.accessibilityLiveRegion = View.ACCESSIBILITY_LIVE_REGION_POLITE
     engineStatus = statusTitle
     val statusRow =
       LinearLayout(activity).apply {
@@ -638,7 +642,7 @@ class GuideWizard(
     }
   }
 
-  /** Action area: gradient primary pill + 2×2 ghost grid (update / reload /
+  /** Action area: gradient primary pill + 2脳2 ghost grid (update / reload /
    *  keep-alive / copy log) + back-to-harness (visible only when the guide
    *  was opened from the cold-start bar). */
   private fun buildActionArea(): LinearLayout {
@@ -649,6 +653,8 @@ class GuideWizard(
         setOnClickListener { onPrimaryAction() }
       }
     primaryButton = primary
+    primary.contentDescription = activity.getString(R.string.a11y_primary_button)
+    primary.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
 
     fun ghost(
       text: String,
@@ -669,6 +675,7 @@ class GuideWizard(
         visibility = View.GONE
       }
     backButton = back
+    back.contentDescription = activity.getString(R.string.a11y_back_button)
     (update.layoutParams as LinearLayout.LayoutParams).bottomMargin = sep
     (reload.layoutParams as LinearLayout.LayoutParams).bottomMargin = sep
     (keepAlive.layoutParams as LinearLayout.LayoutParams).bottomMargin = sep
@@ -740,7 +747,7 @@ class GuideWizard(
     primaryLabel = label
     val chevron =
       TextView(activity).apply {
-        this.text = "›"
+        this.text = "鈥?
         textSize = 14f
         typeface = android.graphics.Typeface.DEFAULT_BOLD
         setTextColor(0xFFFFFFFF.toInt())
@@ -792,7 +799,7 @@ class GuideWizard(
     return VersionLine.format(appVersion, abi, SnapshotVersion.read(activity))
   }
 
-  /** Bottom version row: app version · ABI · snapshot dsh version. */
+  /** Bottom version row: app version 路 ABI 路 snapshot dsh version. */
   private fun buildVersionLine(): TextView {
     val palette = GuidePalette(activity)
     return TextView(activity).apply {
@@ -901,6 +908,7 @@ class GuideWizard(
   fun hideKeepAlivePanel() {
     keepAliveBlock?.visibility = View.GONE
     statusCard?.visibility = View.VISIBLE
+    statusCard?.contentDescription = activity.getString(R.string.a11y_status_card)
     actionRow?.visibility = View.VISIBLE
   }
 
@@ -912,7 +920,7 @@ class GuideWizard(
     logPanel.open()
   }
 
-  /** ACTION_SEND (text/plain) — no storage permission needed. */
+  /** ACTION_SEND (text/plain) 鈥?no storage permission needed. */
   private fun shareLog(text: String) {
     val intent =
       android.content.Intent(android.content.Intent.ACTION_SEND).apply {
@@ -927,9 +935,9 @@ class GuideWizard(
     }
   }
 
-  /** Vertical three-step card list (runtime → container → launch). Each row
+  /** Vertical three-step card list (runtime 鈫?container 鈫?launch). Each row
    *  is a hairline shell card with an inset inner: numbered circle + title +
-   *  status text + trailing state glyph (✓ done / breathing dot active). */
+   *  status text + trailing state glyph (鉁?done / breathing dot active). */
   private fun buildStepCards(): LinearLayout {
     val palette = GuidePalette(activity)
     val names =
@@ -1033,6 +1041,9 @@ class GuideWizard(
         }
       card.addView(inset)
       cards[i] = card
+      val stepLabels = intArrayOf(R.string.a11y_step_card_runtime, R.string.a11y_step_card_container, R.string.a11y_step_card_launch)
+      card.contentDescription = activity.getString(stepLabels[i])
+      card.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
       list.addView(card)
     }
     stepCircles = circles.map { it!! }.toTypedArray()
@@ -1065,7 +1076,7 @@ class GuideWizard(
     topStatusLabel = label
     val chevron =
       TextView(activity).apply {
-        text = "›"
+        text = "鈥?
         setTextColor(palette.textSecondary)
         textSize = 16f
       }
@@ -1088,6 +1099,7 @@ class GuideWizard(
     bar.addView(dot)
     bar.addView(label)
     bar.addView(chevron)
+        bar.contentDescription = activity.getString(R.string.a11y_top_bar)
     bar.elevation = (6 * d)
     return bar
   }
@@ -1113,3 +1125,4 @@ class GuideWizard(
     topPulseDot?.alpha = 1f
   }
 }
+

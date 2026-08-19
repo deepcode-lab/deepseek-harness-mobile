@@ -1,118 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">深度编码</string>
+  <string name="app_name">娣卞害缂栫爜</string>
 
   <!-- Guide view -->
   
-  <string name="guide_brand_subtitle">本地 AI 编码环境</string>
-  <string name="button_retry">重试</string>
-  <string name="button_check_update">检查运行时更新</string>
-  <string name="button_copy_log">复制诊断日志</string>
-  <string name="button_back_to_harness">返回 Harness</string>
-  <string name="button_launch_engine">启动引擎</string>
-  <string name="step_runtime">运行时</string>
-  <string name="step_container">容器</string>
-  <string name="step_launch">启动</string>
+  <string name="guide_brand_subtitle">鏈湴 AI 缂栫爜鐜</string>
+  <string name="button_retry">閲嶈瘯</string>
+  <string name="button_check_update">妫€鏌ヨ繍琛屾椂鏇存柊</string>
+  <string name="button_copy_log">澶嶅埗璇婃柇鏃ュ織</string>
+  <string name="button_back_to_harness">杩斿洖 Harness</string>
+  <string name="button_launch_engine">鍚姩寮曟搸</string>
+  <string name="step_runtime">杩愯鏃?/string>
+  <string name="step_container">瀹瑰櫒</string>
+  <string name="step_launch">鍚姩</string>
   
-  <string name="container_install_done">运行时已就绪</string>
-  <string name="container_install_failed">运行时安装失败</string>
-  <string name="notif_log_copied">诊断日志已复制</string>
-  <string name="notif_log_copied_detail">已复制 %1$s 行到剪贴板，请粘贴到问题反馈中</string>
+  <string name="container_install_done">杩愯鏃跺凡灏辩华</string>
+  <string name="container_install_failed">杩愯鏃跺畨瑁呭け璐?/string>
+  <string name="notif_log_copied">璇婃柇鏃ュ織宸插鍒?/string>
+  <string name="notif_log_copied_detail">宸插鍒?%1$s 琛屽埌鍓创鏉匡紝璇风矘璐村埌闂鍙嶉涓?/string>
 
   <!-- Notifications -->
-  <string name="notif_workspace_unavailable">外部工作区不可用</string>
-  <string name="notif_workspace_unavailable_detail">Android 10 及以下不支持选择外部目录</string>
-  <string name="notif_download_rejected">下载被拒绝</string>
-  <string name="notif_engine_only_export">仅支持从本机引擎导出文件</string>
-  <string name="notif_export_failed">导出失败</string>
-  <string name="notif_export_failed_old_os">当前系统版本不支持下载，请升级到 Android 10+</string>
-  <string name="notif_export_saved">会话日志已导出</string>
-  <string name="notif_export_saved_to">已保存到 下载/%1$s</string>
+  <string name="notif_workspace_unavailable">澶栭儴宸ヤ綔鍖轰笉鍙敤</string>
+  <string name="notif_workspace_unavailable_detail">Android 10 鍙婁互涓嬩笉鏀寔閫夋嫨澶栭儴鐩綍</string>
+  <string name="notif_download_rejected">涓嬭浇琚嫆缁?/string>
+  <string name="notif_engine_only_export">浠呮敮鎸佷粠鏈満寮曟搸瀵煎嚭鏂囦欢</string>
+  <string name="notif_export_failed">瀵煎嚭澶辫触</string>
+  <string name="notif_export_failed_old_os">褰撳墠绯荤粺鐗堟湰涓嶆敮鎸佷笅杞斤紝璇峰崌绾у埌 Android 10+</string>
+  <string name="notif_export_saved">浼氳瘽鏃ュ織宸插鍑?/string>
+  <string name="notif_export_saved_to">宸蹭繚瀛樺埌 涓嬭浇/%1$s</string>
 
   <!-- Export result dialog -->
-  <string name="export_success">导出成功</string>
-  <string name="export_failed">导出失败</string>
+  <string name="export_success">瀵煎嚭鎴愬姛</string>
+  <string name="export_failed">瀵煎嚭澶辫触</string>
 
   <!-- Engine flow status -->
-  <string name="status_first_extract">正在准备你的工作空间…</string>
-  <string name="status_engine_starting">正在启动引擎…</string>
-  <string name="status_engine_starting_detail">冷启动最长约一分钟，点击查看详情</string>
-  <string name="status_engine_error_detail">点击查看详情</string>
-  <string name="status_container_installing">正在准备运行时…</string>
-  <string name="status_container_installing_detail">一次性本地初始化</string>
-  <string name="status_container_init_failed">运行时初始化失败，请重试</string>
-  <string name="status_ready_to_launch">一切就绪</string>
-  <string name="status_ready_to_launch_detail">启动引擎以进入你的工作空间</string>
-  <string name="status_extracting">正在解压运行时… %1$d MB</string>
-  <string name="status_extract_failed">运行时解压失败，请重试。</string>
-  <string name="status_engine_start_failed">引擎启动失败，请重试。</string>
-  <string name="status_engine_timeout">引擎启动超时，请重试。</string>
+  <string name="status_first_extract">姝ｅ湪鍑嗗浣犵殑宸ヤ綔绌洪棿鈥?/string>
+  <string name="status_engine_starting">姝ｅ湪鍚姩寮曟搸鈥?/string>
+  <string name="status_engine_starting_detail">鍐峰惎鍔ㄦ渶闀跨害涓€鍒嗛挓锛岀偣鍑绘煡鐪嬭鎯?/string>
+  <string name="status_engine_error_detail">鐐瑰嚮鏌ョ湅璇︽儏</string>
+  <string name="status_container_installing">姝ｅ湪鍑嗗杩愯鏃垛€?/string>
+  <string name="status_container_installing_detail">涓€娆℃€ф湰鍦板垵濮嬪寲</string>
+  <string name="status_container_init_failed">杩愯鏃跺垵濮嬪寲澶辫触锛岃閲嶈瘯</string>
+  <string name="status_ready_to_launch">涓€鍒囧氨缁?/string>
+  <string name="status_ready_to_launch_detail">鍚姩寮曟搸浠ヨ繘鍏ヤ綘鐨勫伐浣滅┖闂?/string>
+  <string name="status_extracting">姝ｅ湪瑙ｅ帇杩愯鏃垛€?%1$d MB</string>
+  <string name="status_extract_failed">杩愯鏃惰В鍘嬪け璐ワ紝璇烽噸璇曘€?/string>
+  <string name="status_engine_start_failed">寮曟搸鍚姩澶辫触锛岃閲嶈瘯銆?/string>
+  <string name="status_engine_timeout">寮曟搸鍚姩瓒呮椂锛岃閲嶈瘯銆?/string>
 
   <!-- Download errors -->
-  <string name="err_create_download">无法创建下载文件</string>
-  <string name="err_write_download">无法写入下载文件</string>
-  <string name="err_export_too_large">导出文件过大</string>
-  <string name="err_unknown">未知错误</string>
+  <string name="err_create_download">鏃犳硶鍒涘缓涓嬭浇鏂囦欢</string>
+  <string name="err_write_download">鏃犳硶鍐欏叆涓嬭浇鏂囦欢</string>
+  <string name="err_export_too_large">瀵煎嚭鏂囦欢杩囧ぇ</string>
+  <string name="err_unknown">鏈煡閿欒</string>
 
   <!-- Runtime update (UpdateManager) -->
-  <string name="update_checking">检查更新…</string>
-  <string name="update_downloading">正在下载运行时（%1$d MB）…</string>
-  <string name="update_verifying">校验…</string>
-  <string name="update_extracting">正在解压新运行时…</string>
-  <string name="update_switching">切换运行时…</string>
-  <string name="update_done">更新完成，引擎已自动重启</string>
-  <string name="update_failed">更新失败：%1$s</string>
-  <string name="err_manifest_https">manifest URL 必须为 HTTPS</string>
-  <string name="err_snapshot_url_https">运行时下载 URL 必须为 HTTPS</string>
-  <string name="err_manifest_no_sha">manifest 缺少 sha256</string>
-  <string name="err_sha_mismatch">SHA256 不匹配: %1$s</string>
-  <string name="err_new_snapshot_no_node">新运行时缺少 node</string>
-  <string name="err_old_runtime_switch">旧运行时切换失败</string>
-  <string name="err_switch_failed_rollback">切换失败且回滚失败（rootfs-old 保留）</string>
-  <string name="err_switch_failed_rolled_back">切换失败，已回滚</string>
-  <string name="err_download_http">下载 HTTP %1$d</string>
-  <string name="err_snapshot_too_large">运行时文件过大</string>
+  <string name="update_checking">妫€鏌ユ洿鏂扳€?/string>
+  <string name="update_downloading">姝ｅ湪涓嬭浇杩愯鏃讹紙%1$d MB锛夆€?/string>
+  <string name="update_verifying">鏍￠獙鈥?/string>
+  <string name="update_extracting">姝ｅ湪瑙ｅ帇鏂拌繍琛屾椂鈥?/string>
+  <string name="update_switching">鍒囨崲杩愯鏃垛€?/string>
+  <string name="update_done">鏇存柊瀹屾垚锛屽紩鎿庡凡鑷姩閲嶅惎</string>
+  <string name="update_failed">鏇存柊澶辫触锛?1$s</string>
+  <string name="err_manifest_https">manifest URL 蹇呴』涓?HTTPS</string>
+  <string name="err_snapshot_url_https">杩愯鏃朵笅杞?URL 蹇呴』涓?HTTPS</string>
+  <string name="err_manifest_no_sha">manifest 缂哄皯 sha256</string>
+  <string name="err_sha_mismatch">SHA256 涓嶅尮閰? %1$s</string>
+  <string name="err_new_snapshot_no_node">鏂拌繍琛屾椂缂哄皯 node</string>
+  <string name="err_old_runtime_switch">鏃ц繍琛屾椂鍒囨崲澶辫触</string>
+  <string name="err_switch_failed_rollback">鍒囨崲澶辫触涓斿洖婊氬け璐ワ紙rootfs-old 淇濈暀锛?/string>
+  <string name="err_switch_failed_rolled_back">鍒囨崲澶辫触锛屽凡鍥炴粴</string>
+  <string name="err_download_http">涓嬭浇 HTTP %1$d</string>
+  <string name="err_snapshot_too_large">杩愯鏃舵枃浠惰繃澶?/string>
   <string name="err_manifest_http">manifest HTTP %1$d</string>
 
   <!-- Engine foreground service -->
-  <string name="engine_channel_name">dsh 引擎</string>
-  <string name="engine_notification_title">dsh 引擎运行中</string>
-  <string name="engine_notification_text">DeepSeek Harness 正在后台工作</string>
+  <string name="engine_channel_name">dsh 寮曟搸</string>
+  <string name="engine_notification_title">dsh 寮曟搸杩愯涓?/string>
+  <string name="engine_notification_text">DeepSeek Harness 姝ｅ湪鍚庡彴宸ヤ綔</string>
 
   <!-- Shizuku -->
-  <string name="shizuku_granted">Shizuku 已授权（v%1$d）——保活增强就绪</string>
-  <string name="shizuku_absent">Shizuku 未运行（可选：后台保活增强需要它）</string>
-  <string name="update_in_progress">更新已在运行，请等待完成。</string>
-  <string name="update_restart_hint">请重启应用以应用新运行时。</string>
-  <string name="button_keep_alive">后台保活设置</string>
-  <string name="keep_alive_title">后台保活</string>
-  <string name="keep_alive_close">完成</string>
-  <string name="keep_alive_battery">电池优化豁免</string>
-  <string name="keep_alive_shizuku">Shizuku 免杀增强</string>
-  <string name="keep_alive_battery_ignored">• 电池优化：已豁免 ✓</string>
-  <string name="keep_alive_battery_not_ignored">• 电池优化：未豁免 —— 请在系统页面中允许</string>
-  <string name="keep_alive_autostart_hint">• 厂商自启动：请在本机电池/安全设置中开启本应用的自启动，否则系统可能将其在后台杀死</string>
-  <string name="shizuku_boost">Shizuku 增强：</string>
-  <string name="shizuku_permission_denied">Shizuku 授权被拒绝 —— 请在 Shizuku 应用中授权后重试。</string>
-  <string name="shizuku_service_disconnected">Shizuku 用户服务已断开。</string>
+  <string name="shizuku_granted">Shizuku 宸叉巿鏉冿紙v%1$d锛夆€斺€斾繚娲诲寮哄氨缁?/string>
+  <string name="shizuku_absent">Shizuku 鏈繍琛岋紙鍙€夛細鍚庡彴淇濇椿澧炲己闇€瑕佸畠锛?/string>
+  <string name="update_in_progress">鏇存柊宸插湪杩愯锛岃绛夊緟瀹屾垚銆?/string>
+  <string name="update_restart_hint">璇烽噸鍚簲鐢ㄤ互搴旂敤鏂拌繍琛屾椂銆?/string>
+  <string name="button_keep_alive">鍚庡彴淇濇椿璁剧疆</string>
+  <string name="keep_alive_title">鍚庡彴淇濇椿</string>
+  <string name="keep_alive_close">瀹屾垚</string>
+  <string name="keep_alive_battery">鐢垫睜浼樺寲璞佸厤</string>
+  <string name="keep_alive_shizuku">Shizuku 鍏嶆潃澧炲己</string>
+  <string name="keep_alive_battery_ignored">鈥?鐢垫睜浼樺寲锛氬凡璞佸厤 鉁?/string>
+  <string name="keep_alive_battery_not_ignored">鈥?鐢垫睜浼樺寲锛氭湭璞佸厤 鈥斺€?璇峰湪绯荤粺椤甸潰涓厑璁?/string>
+  <string name="keep_alive_autostart_hint">鈥?鍘傚晢鑷惎鍔細璇峰湪鏈満鐢垫睜/瀹夊叏璁剧疆涓紑鍚湰搴旂敤鐨勮嚜鍚姩锛屽惁鍒欑郴缁熷彲鑳藉皢鍏跺湪鍚庡彴鏉€姝?/string>
+  <string name="shizuku_boost">Shizuku 澧炲己锛?/string>
+  <string name="shizuku_permission_denied">Shizuku 鎺堟潈琚嫆缁?鈥斺€?璇峰湪 Shizuku 搴旂敤涓巿鏉冨悗閲嶈瘯銆?/string>
+  <string name="shizuku_service_disconnected">Shizuku 鐢ㄦ埛鏈嶅姟宸叉柇寮€銆?/string>
 
   <!-- Top bar (floating pill) -->
-  <string name="bar_failed">连接失败 · 点按查看</string>
-  <string name="bar_success">引擎已就绪</string>
+  <string name="bar_failed">杩炴帴澶辫触 路 鐐规寜鏌ョ湅</string>
+  <string name="bar_success">寮曟搸宸插氨缁?/string>
 
   <!-- Guide actions -->
-  <string name="button_reload">重新加载</string>
-  <string name="button_view_log">查看日志</string>
+  <string name="button_reload">閲嶆柊鍔犺浇</string>
+  <string name="button_view_log">鏌ョ湅鏃ュ織</string>
 
   <!-- Step cards -->
-  <string name="step_status_done">完成</string>
-  <string name="step_status_active">进行中…</string>
-  <string name="step_status_pending">待执行</string>
+  <string name="step_status_done">瀹屾垚</string>
+  <string name="step_status_active">杩涜涓€?/string>
+  <string name="step_status_pending">寰呮墽琛?/string>
 
   <!-- Log viewer panel -->
-  <string name="log_panel_title">诊断日志</string>
-  <string name="button_copy_panel">复制</string>
-  <string name="button_share">分享</string>
-  <string name="button_close">关闭</string>
-  <string name="log_share_title">分享诊断日志</string>
+  <string name="log_panel_title">璇婃柇鏃ュ織</string>
+  <string name="button_copy_panel">澶嶅埗</string>
+  <string name="button_share">鍒嗕韩</string>
+  <string name="button_close">鍏抽棴</string>
+  <string name="log_share_title">鍒嗕韩璇婃柇鏃ュ織</string>
+
+  <!-- Accessibility -->
+  <string name="accessibility_service_description">DeepSeek Harness 无障碍服务：提供屏幕朗读和 UI 元素描述支持</string>
+  <string name="a11y_brand_block">深度编码应用标志</string>
+  <string name="a11y_step_card_runtime">步骤一：运行环境</string>
+  <string name="a11y_step_card_container">步骤二：容器</string>
+  <string name="a11y_step_card_launch">步骤三：启动</string>
+  <string name="a11y_step_status_done">已完成</string>
+  <string name="a11y_step_status_active">进行中</string>
+  <string name="a11y_step_status_pending">待处理</string>
+  <string name="a11y_primary_button">主要操作按钮</string>
+  <string name="a11y_back_button">返回按钮</string>
+  <string name="a11y_action_grid">操作区域</string>
+  <string name="a11y_status_card">引擎状态</string>
+  <string name="a11y_top_bar">状态浮动条</string>
+  <string name="a11y_log_panel">诊断日志面板</string>
+  <string name="a11y_copy_button">复制诊断日志</string>
+  <string name="a11y_share_button">分享诊断日志</string>
+  <string name="a11y_close_button">关闭日志面板</string>
+  <string name="a11y_log_content">诊断日志内容</string>
+  <string name="a11y_keep_alive_panel">后台保活设置面板</string>
+  <string name="a11y_webview">深度编码工作区</string>
+  <string name="a11y_error_block">错误详情</string>
 </resources>
+

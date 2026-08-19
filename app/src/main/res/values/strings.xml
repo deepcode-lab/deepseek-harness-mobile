@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">深度编码</string>
+  <string name="app_name">娣卞害缂栫爜</string>
 
   <!-- Guide view -->
   <string name="guide_brand_subtitle">Local AI coding environment</string>
@@ -15,7 +15,7 @@
   <string name="container_install_done">Runtime ready</string>
   <string name="container_install_failed">Runtime install failed</string>
   <string name="notif_log_copied">Diagnostic log copied</string>
-  <string name="notif_log_copied_detail">%1$s lines copied to the clipboard — paste them into your bug report</string>
+  <string name="notif_log_copied_detail">%1$s lines copied to the clipboard 鈥?paste them into your bug report</string>
 
   <!-- Notifications -->
   <string name="notif_workspace_unavailable">External workspace unavailable</string>
@@ -32,15 +32,15 @@
   <string name="export_failed">Export failed</string>
 
   <!-- Engine flow status -->
-  <string name="status_first_extract">Preparing your workspace…</string>
-  <string name="status_extracting">Extracting runtime… %1$d MB</string>
+  <string name="status_first_extract">Preparing your workspace鈥?/string>
+  <string name="status_extracting">Extracting runtime鈥?%1$d MB</string>
   <string name="status_extract_failed">Runtime extraction failed. Please retry.</string>
   <string name="status_engine_start_failed">Engine start failed. Please retry.</string>
   <string name="status_engine_timeout">Engine start timed out. Please retry.</string>
-  <string name="status_engine_starting">Starting engine…</string>
+  <string name="status_engine_starting">Starting engine鈥?/string>
   <string name="status_engine_starting_detail">Cold start can take up to a minute. Tap for details.</string>
   <string name="status_engine_error_detail">Tap for details.</string>
-  <string name="status_container_installing">Preparing runtime…</string>
+  <string name="status_container_installing">Preparing runtime鈥?/string>
   <string name="status_container_installing_detail">One-time local setup</string>
   <string name="status_container_init_failed">Runtime failed to initialize. Please retry.</string>
   <string name="status_ready_to_launch">Everything is ready</string>
@@ -53,11 +53,11 @@
   <string name="err_unknown">Unknown error</string>
 
   <!-- Runtime update (UpdateManager) -->
-  <string name="update_checking">Checking for updates…</string>
-  <string name="update_downloading">Downloading runtime (%1$d MB)…</string>
-  <string name="update_verifying">Verifying…</string>
-  <string name="update_extracting">Extracting new runtime…</string>
-  <string name="update_switching">Switching runtime…</string>
+  <string name="update_checking">Checking for updates鈥?/string>
+  <string name="update_downloading">Downloading runtime (%1$d MB)鈥?/string>
+  <string name="update_verifying">Verifying鈥?/string>
+  <string name="update_extracting">Extracting new runtime鈥?/string>
+  <string name="update_switching">Switching runtime鈥?/string>
   <string name="update_done">Update complete; the engine restarted</string>
   <string name="update_failed">Update failed: %1$s</string>
   <string name="err_manifest_https">The manifest URL must use HTTPS</string>
@@ -78,24 +78,24 @@
   <string name="engine_notification_text">DeepSeek Harness is working in the background</string>
 
   <!-- Shizuku -->
-  <string name="shizuku_granted">Shizuku authorized (v%1$d) — keep-alive boost ready</string>
+  <string name="shizuku_granted">Shizuku authorized (v%1$d) 鈥?keep-alive boost ready</string>
   <string name="shizuku_absent">Shizuku not running (optional: needed for background keep-alive boost)</string>
-  <string name="update_in_progress">Update already running — wait for it to finish.</string>
+  <string name="update_in_progress">Update already running 鈥?wait for it to finish.</string>
   <string name="update_restart_hint">Restart the app to apply the new runtime.</string>
   <string name="button_keep_alive">Background keep-alive</string>
   <string name="keep_alive_title">Background keep-alive</string>
   <string name="keep_alive_close">Done</string>
   <string name="keep_alive_battery">Battery optimization exemption</string>
   <string name="keep_alive_shizuku">Shizuku un-killable boost</string>
-  <string name="keep_alive_battery_ignored">• Battery optimization: exempted ✓</string>
-  <string name="keep_alive_battery_not_ignored">• Battery optimization: NOT exempted — open the system page and allow it</string>
-  <string name="keep_alive_autostart_hint">• OEM autostart: enable autostart for this app in your vendor battery/security settings, or the system may kill it in the background</string>
+  <string name="keep_alive_battery_ignored">鈥?Battery optimization: exempted 鉁?/string>
+  <string name="keep_alive_battery_not_ignored">鈥?Battery optimization: NOT exempted 鈥?open the system page and allow it</string>
+  <string name="keep_alive_autostart_hint">鈥?OEM autostart: enable autostart for this app in your vendor battery/security settings, or the system may kill it in the background</string>
   <string name="shizuku_boost">Shizuku boost: </string>
-  <string name="shizuku_permission_denied">Shizuku permission denied — grant it in the Shizuku app and retry.</string>
+  <string name="shizuku_permission_denied">Shizuku permission denied 鈥?grant it in the Shizuku app and retry.</string>
   <string name="shizuku_service_disconnected">Shizuku user service disconnected.</string>
 
   <!-- Top bar (floating pill) -->
-  <string name="bar_failed">Connection failed · tap for details</string>
+  <string name="bar_failed">Connection failed 路 tap for details</string>
   <string name="bar_success">Engine ready</string>
 
   <!-- Guide actions -->
@@ -104,7 +104,7 @@
 
   <!-- Step cards -->
   <string name="step_status_done">Done</string>
-  <string name="step_status_active">In progress…</string>
+  <string name="step_status_active">In progress鈥?/string>
   <string name="step_status_pending">Pending</string>
 
   <!-- Log viewer panel -->
@@ -113,4 +113,28 @@
   <string name="button_share">Share</string>
   <string name="button_close">Close</string>
   <string name="log_share_title">Share diagnostic log</string>
+
+  <!-- Accessibility -->
+  <string name="accessibility_service_description">DeepSeek Harness accessibility service: screen reader and UI element descriptions</string>
+  <string name="a11y_brand_block">DeepSeek Harness app logo</string>
+  <string name="a11y_step_card_runtime">Step 1: Runtime</string>
+  <string name="a11y_step_card_container">Step 2: Container</string>
+  <string name="a11y_step_card_launch">Step 3: Launch</string>
+  <string name="a11y_step_status_done">Done</string>
+  <string name="a11y_step_status_active">In progress</string>
+  <string name="a11y_step_status_pending">Pending</string>
+  <string name="a11y_primary_button">Primary action button</string>
+  <string name="a11y_back_button">Back button</string>
+  <string name="a11y_action_grid">Action area</string>
+  <string name="a11y_status_card">Engine status</string>
+  <string name="a11y_top_bar">Status floating bar</string>
+  <string name="a11y_log_panel">Diagnostic log panel</string>
+  <string name="a11y_copy_button">Copy diagnostic log</string>
+  <string name="a11y_share_button">Share diagnostic log</string>
+  <string name="a11y_close_button">Close log panel</string>
+  <string name="a11y_log_content">Diagnostic log content</string>
+  <string name="a11y_keep_alive_panel">Background keep-alive settings</string>
+  <string name="a11y_webview">DeepSeek Harness workspace</string>
+  <string name="a11y_error_block">Error details</string>
 </resources>
+
